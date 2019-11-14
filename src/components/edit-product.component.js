@@ -3,33 +3,44 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
-export default class EditExercise extends Component {
+export default class EditProduct extends Component {
   constructor(props) {
     super(props);
 
-    this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeName = this.onChangeName.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
-    this.onChangeDuration = this.onChangeDuration.bind(this);
-    this.onChangeDate = this.onChangeDate.bind(this);
+    this.onChangeBrand = this.onChangeBrand.bind(this);
+    this.onChangeNewPrice = this.onChangeNewPrice.bind(this);
+    this.onChangeUsedPrice = this.onChangeUsedPrice.bind(this);
+    this.onChangeTrialPrice = this.onChangeTrialPrice.bind(this);
+    this.onChangeInventory = this.onChangeInventory.bind(this);
+    this.onChangeDate_Added = this.onChangeDate_Added.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      username: '',
-      description: '',
-      duration: 0,
-      date: new Date(),
-      users: []
+        name: '',
+        description: '',
+        brand: '',
+        new_price: 0,
+        used_price: 0,
+        trial_price: 0,
+        inventory: 0,
+        date_added: new Date(),
     }
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/exercises/'+this.props.match.params.id)
+    axios.get('http://localhost:5000/products/'+this.props.match.params.id)
       .then(response => {
         this.setState({
-          username: response.data.username,
-          description: response.data.description,
-          duration: response.data.duration,
-          date: new Date(response.data.date)
+            name: response.data.name,
+            description: response.data.description,
+            brand: response.data.brand,
+            new_price: response.data.new_price,
+            used_price: response.data.used_price,
+            trial_price: response.data.trial_price,
+            inventory: response.data.inventory,
+            date_added: new Date(response.data.date_added)
         })
       })
       .catch(function (error) {
@@ -50,69 +61,82 @@ export default class EditExercise extends Component {
 
   }
 
-  onChangeUsername(e) {
-    this.setState({
-      username: e.target.value
-    })
+  onChangeName(e) {
+      this.setState({
+          name: e.target.value
+      });
   }
 
   onChangeDescription(e) {
-    this.setState({
-      description: e.target.value
-    })
+      this.setState({
+          description: e.target.value
+      });
   }
-
-  onChangeDuration(e) {
-    this.setState({
-      duration: e.target.value
-    })
+  onChangeBrand(e) {
+      this.setState({
+          brand: e.target.value
+      });
   }
-
-  onChangeDate(date) {
-    this.setState({
-      date: date
-    })
+  onChangeNewPrice(e) {
+      this.setState({
+          new_price: e.target.value
+      });
+  }
+  onChangeUsedPrice(e) {
+      this.setState({
+          used_price: e.target.value
+      });
+  }
+  onChangeTrialPrice(e) {
+      this.setState({
+          trila_price: e.target.value
+      });
+  }
+  onChangeInventory(e) {
+      this.setState({
+          inventory: e.target.value
+      });
+  }
+  onChangeDate_Added(date) {
+      this.setState({
+          date_added: date
+      });
   }
 
   onSubmit(e) {
-    e.preventDefault();
+      e.preventDefault();
 
-    const exercise = {
-      username: this.state.username,
-      description: this.state.description,
-      duration: this.state.duration,
-      date: this.state.date
-    }
+      const product = {
+          name: this.state.name,
+          description: this.state.description,
+          brand: this.state.brand,
+          new_price: this.state.new_price,
+          used_price: this.state.used_price,
+          trial_price: this.state.trial_price,
+          inventory: this.state.inventory,
+          date_added: this.state.date_added,
+      };
 
-    console.log(exercise);
+      console.log(product);
 
-    axios.post('http://localhost:5000/exercises/update/' + this.props.match.params.id, exercise)
-      .then(res => console.log(res.data));
-
-    window.location = '/';
+      axios.post('http://localhost:5000/products/update/' + this.props.match.params.id, product)
+        .then(res => console.log(res.data));
+      window.location = '/';
   }
 
   render() {
     return (
     <div>
-      <h3>Edit Exercise Log</h3>
+      <h3>Edit Products</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group">
-          <label>Username: </label>
-          <select ref="userInput"
+          <label>Name: </label>
+          <input  type="text"
               required
               className="form-control"
-              value={this.state.username}
-              onChange={this.onChangeUsername}>
-              {
-                this.state.users.map(function(user) {
-                  return <option
-                    key={user}
-                    value={user}>{user}
-                    </option>;
-                })
-              }
-          </select>
+              value={this.state.name}
+              onChange={this.onChangeName}
+              />
         </div>
         <div className="form-group">
           <label>Description: </label>
@@ -124,26 +148,62 @@ export default class EditExercise extends Component {
               />
         </div>
         <div className="form-group">
-          <label>Duration (in minutes): </label>
-          <input
-              type="text"
+          <label>Brand: </label>
+          <input  type="text"
+              required
               className="form-control"
-              value={this.state.duration}
-              onChange={this.onChangeDuration}
+              value={this.state.brand}
+              onChange={this.onChangeBrand}
               />
         </div>
         <div className="form-group">
-          <label>Date: </label>
+          <label>New Price: </label>
+          <input  type="number"
+              required
+              className="form-control"
+              value={this.state.new_price}
+              onChange={this.onChangeNewPrice}
+              />
+        </div>
+        <div className="form-group">
+          <label>Used Price: </label>
+          <input  type="number"
+              required
+              className="form-control"
+              value={this.state.used_price}
+              onChange={this.onChangeUsedPrice}
+              />
+        </div>
+        <div className="form-group">
+          <label>Trial Price: </label>
+          <input  type="number"
+              required
+              className="form-control"
+              value={this.state.trial_price}
+              onChange={this.onChangeTrialPrice}
+              />
+        </div>
+        <div className="form-group">
+          <label>Inventory: </label>
+          <input  type="number"
+              required
+              className="form-control"
+              value={this.state.inventory}
+              onChange={this.onChangeInventory}
+              />
+        </div>
+        <div className="form-group">
+          <label>Date Added: </label>
           <div>
             <DatePicker
-              selected={this.state.date}
+              selected={this.state.date_added}
               onChange={this.onChangeDate}
             />
           </div>
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Edit Exercise Log" className="btn btn-primary" />
+          <input type="submit" value="Edit Products" className="btn btn-primary" />
         </div>
       </form>
     </div>

@@ -30,9 +30,6 @@ export default class CreateProduct extends Component {
     }
 
     componentDidMount() {
-        // this.setState({
-        //     name: 'Product name'
-        // });
         axios.get('http://localhost:5000/users/')
           .then(response => {
             if (response.data.length > 0) {
