@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-
-// let { id } = useParams();
-
-// return (
-//     <div>
-//         <h3>ID: {id}</h3>
-//     </div>
-
-
 export default class ProductCard extends Component {
     constructor(props) {
         super(props);
@@ -26,13 +17,6 @@ export default class ProductCard extends Component {
             .catch((error) => {
                 console.log(error);
             })
-
-        // let response = await fetch('http://localhost:5000/products/' + this.props.product._id)
-        // let data = await response.json()
-        // this.setState({
-        //     loading: false,
-        //     product: data
-        // })
     }
 
     render() {
@@ -40,7 +24,6 @@ export default class ProductCard extends Component {
             <div className="product">
                 <div className="product__information">
                     <h2 className="Product-title">{this.state.product.name}</h2>
-                    {/* <BuyButton {...this.state} /> */}
                 </div>
                 <div className="product__description">
                     {this.state.product.description}

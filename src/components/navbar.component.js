@@ -1,26 +1,63 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/components/navbar.css'
+import React from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+import { makeStyles } from '@material-ui/core/styles';
 
-export default class Navbar extends Component {
-  render() {
-    return (
-      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <Link to="/" className="navbar-brand">parenthood</Link>
-        <div className="collpase navbar-~collapse">
-          <ul className="navbar-nav mr-auto">
-            <li className="navbar-item">
-              <Link to="/shop" className="nav-link">Shop</Link>
-            </li>
-            <li className="navbar-item">
-              <Link to="/about-us" className="nav-link">About Us</Link>
-            </li>
-            <li className="navbar-item">
-              <Link to="/create" className="nav-link">Add Item</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    );
-  }
+
+const useStyles = makeStyles(theme => ({
+  '@global': {
+    ul: {
+      margin: 0,
+      padding: 0,
+    },
+    li: {
+      listStyle: 'none',
+    },
+  },
+  appBar: {
+    borderBottom: `1px solid ${theme.palette.divider}`,
+  },
+  toolbar: {
+    flexWrap: 'wrap',
+  },
+  toolbarTitle: {
+    flexGrow: 1,
+  },
+  link: {
+    margin: theme.spacing(1, 1.5),
+  },
+}));
+
+export default function Pricing() {
+  const classes = useStyles();
+
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
+        <Toolbar className={classes.toolbar}>
+          <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+            <Link color="textPrimary" href="/">
+              parenthood
+            </Link>
+          </Typography>
+          <nav>
+            <Link variant="button" color="textPrimary" href="/shop" className={classes.link}>
+              Shop
+            </Link>
+            <Link variant="button" color="textPrimary" href="/about-us" className={classes.link}>
+              About Us
+            </Link>
+          </nav>
+          <Button href="#" color="primary" variant="outlined" className={classes.link}>
+            Your Cart
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </React.Fragment>
+  );
 }
