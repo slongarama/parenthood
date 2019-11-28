@@ -31,17 +31,17 @@ export default class CreateProduct extends Component {
 
     componentDidMount() {
         axios.get('http://localhost:5000/users/')
-          .then(response => {
-            if (response.data.length > 0) {
-              this.setState({
-                // users: response.data.map(user => user.username),
-                name: response.data[0].username
-              });
-            }
-          })
-          .catch((error) => {
-            console.log(error);
-          })
+            .then(response => {
+                if (response.data.length > 0) {
+                    this.setState({
+                        // users: response.data.map(user => user.username),
+                        name: response.data[0].username
+                    });
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            })
     }
 
     onChangeName(e) {
@@ -71,7 +71,7 @@ export default class CreateProduct extends Component {
     }
     onChangeTrialPrice(e) {
         this.setState({
-            trila_price: e.target.value
+            trial_price: e.target.value
         });
     }
     onChangeInventory(e) {
@@ -110,82 +110,82 @@ export default class CreateProduct extends Component {
             <div>
                 <h3>Add New Product</h3>
                 <form onSubmit={this.onSubmit}>
-                <div className="form-group">
-                    <label>Name: </label>
-                    <input  type="text"
-                    required
-                    className="form-control"
-                    value={this.state.name}
-                    onChange={this.onChangeName}
-                    />
-                </div>
-                <div className="form-group">
-                    <label>Description: </label>
-                    <input  type="text"
-                    required
-                    className="form-control"
-                    value={this.state.description}
-                    onChange={this.onChangeDescription}
-                    />
-                </div>
-                <div className="form-group">
-                    <label>Brand</label>
-                    <input
-                    type="text"
-                    className="form-control"
-                    value={this.state.brand}
-                    onChange={this.onChangeBrand}
-                    />
-                </div>
-                <div className="form-group">
-                    <label>New Price</label>
-                    <input
-                    type="number"
-                    className="form-control"
-                    value={this.state.new_price}
-                    onChange={this.onChangeNewPrice}
-                    />
-                </div>
-                <div className="form-group">
-                    <label>Used Price</label>
-                    <input
-                    type="number"
-                    className="form-control"
-                    value={this.state.used_price}
-                    onChange={this.onChangeUsedPrice}
-                    />
-                </div>
-                <div className="form-group">
-                    <label>Trial Price</label>
-                    <input
-                    type="number"
-                    className="form-control"
-                    value={this.state.trial_price}
-                    onChange={this.onChangeTrialPrice}
-                    />
-                </div>
-                <div className="form-group">
-                    <label>Inventory</label>
-                    <input
-                    type="number"
-                    className="form-control"
-                    value={this.state.inventory}
-                    onChange={this.onChangeInventory}
-                    />
-                </div>
-                <div className="form-group">
-                    <label>Date: </label>
-                    <div>
-                        <DatePicker
-                        selected={this.state.date_added}
-                        onChange={this.onChangeDate_Added}
+                    <div className="form-group">
+                        <label>Name: </label>
+                        <input type="text"
+                            required
+                            className="form-control"
+                            value={this.state.name}
+                            onChange={this.onChangeName}
                         />
                     </div>
-                </div>
-                <div className="form-group">
-                    <input type="submit" value="Add Product" className="btn btn-primary" />
-                </div>
-            </form>
+                    <div className="form-group">
+                        <label>Description: </label>
+                        <input type="text"
+                            required
+                            className="form-control"
+                            value={this.state.description}
+                            onChange={this.onChangeDescription}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Brand</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            value={this.state.brand}
+                            onChange={this.onChangeBrand}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>New Price</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            value={this.state.new_price}
+                            onChange={this.onChangeNewPrice}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Used Price</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            value={this.state.used_price}
+                            onChange={this.onChangeUsedPrice}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Trial Price</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            value={this.state.trial_price}
+                            onChange={this.onChangeTrialPrice}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Inventory</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            value={this.state.inventory}
+                            onChange={this.onChangeInventory}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Date: </label>
+                        <div>
+                            <DatePicker
+                                selected={this.state.date_added}
+                                onChange={this.onChangeDate_Added}
+                            />
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <input type="submit" value="Add Product" className="btn btn-primary" />
+                    </div>
+                </form>
             </div>
         )
     }
