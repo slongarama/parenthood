@@ -45,6 +45,12 @@ router.route('/:id').delete((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/shop').get((req, res) => {
+  Product.find()
+    .then(products => res.json(products))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
 router.route('/view/:id').get((req, res) => {
   Product.findById(req.params.id)
     .then(product => res.json(product))

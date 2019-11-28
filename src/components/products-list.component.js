@@ -34,7 +34,7 @@ export default class ProductsList extends Component {
   render() {
     return (
       <div className="ProductList">
-        <h2 className="ProductList-title">Available Products ({this.state.products.length})</h2>
+        <h2 className="ProductList-title">Our Shop ({this.state.products.length})</h2>
         <div className="ProductList-container">
           {this.LoadAllProducts()}
         </div>

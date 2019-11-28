@@ -4,10 +4,11 @@
 }
 
 .ProductList-title {
-    color: $dark-grey;
+    color: #fc7b72;
     font-weight: 500;
     line-height: 1.5;
-    border-bottom: 1px solid transparentize($dark-grey, 0.8);
+    border-bottom: 1px solid transparentize(#fc7b72, 0.8);
+    text-align: center;
 }
 
 .ProductList-container {
@@ -16,7 +17,7 @@
 }
 
 .ProductList-product {
-    @include drop-shadow($dark-grey, 0.95);
+    /* @include drop-shadow(#fc7b72, 0.95); */
     text-align: center;
     margin: 5px;
     flex: 1;
@@ -26,16 +27,10 @@
     padding: 20px;
     border-radius: 4px;
 
-    img {
-        height: 100%;
-        width: 100%;
-        padding: 20px;
-    }
-
-    a {
+    /* a {
         text-decoration: none;
         color: inherit;
-    }
+    } */
 
     h3 {
         margin: 0;

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Navbar from "./components/navbar.component"
+import LandingPage from "./components/landing-page.component"
 import ProductsList from "./components/products-list.component";
 import ProductCard from "./components/product-card.component";
 import EditProduct from "./components/edit-product.component";
@@ -16,7 +17,8 @@ function App() {
         <Navbar />
         <br />
         <Switch>
-          <Route path="/" exact component={ProductsList} />
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/shop" component={ProductsList} />
           <Route path="/view/:id" component={ProductCard} />
           <Route path="/edit/:id" component={EditProduct} />
           <Route path="/create" component={CreateProduct} />
