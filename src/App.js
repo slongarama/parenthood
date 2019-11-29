@@ -10,7 +10,6 @@ import EditProduct from "./components/edit-product.component";
 import CreateProduct from "./components/create-product.component";
 import CreateUser from "./components/create-user.component";
 import StickyFooter from "./components/sticky-footer.component"
-// import Pricing from "./components/pricing-section.component"
 
 function App() {
   return (
