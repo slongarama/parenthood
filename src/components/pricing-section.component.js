@@ -11,6 +11,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
+    '@global': {
+        ul: {
+            margin: 0,
+            padding: 0,
+        },
+        li: {
+            listStyle: 'none',
+        },
+    },
     cardHeader: {
         backgroundColor:
             theme.palette.type === 'dark' ? theme.palette.grey[700] : theme.palette.grey[200],
@@ -20,6 +29,10 @@ const useStyles = makeStyles(theme => ({
         justifyContent: 'center',
         alignItems: 'baseline',
         marginBottom: theme.spacing(2),
+    },
+    pricingContainer: {
+        marginTop: 60,
+        marginBottom: 60,
     },
 }));
 
@@ -35,7 +48,7 @@ const tiers = [
             'Free shipping'
         ],
         buttonText: 'Coming Soon',
-        buttonVariant: 'contained',
+        buttonVariant: 'outlined',
     },
     {
         title: 'Rent (Like) New',
@@ -48,7 +61,7 @@ const tiers = [
             'Free shipping',
         ],
         buttonText: 'Get started now',
-        buttonVariant: 'outlined',
+        buttonVariant: 'contained',
     },
     {
         title: 'Buy Pre-Loved',
@@ -71,7 +84,7 @@ export default function Pricing() {
     return (
         <React.Fragment>
             <CssBaseline />
-            <Container maxWidth="md" component="main">
+            <Container maxWidth="md" component="main" className={classes.pricingContainer}>
                 <Grid container spacing={5} alignItems="flex-end">
                     {tiers.map(tier => (
                         // Enterprise card is full width at sm breakpoint
