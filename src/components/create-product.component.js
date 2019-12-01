@@ -10,27 +10,29 @@ export default class CreateProduct extends Component {
         this.onChangeName = this.onChangeName.bind(this);
         this.onChangeDescription = this.onChangeDescription.bind(this);
         this.onChangeBrand = this.onChangeBrand.bind(this);
-        this.onChangeNewPrice = this.onChangeNewPrice.bind(this);
-        this.onChangeUsedPrice = this.onChangeUsedPrice.bind(this);
-        this.onChangeTrialPrice = this.onChangeTrialPrice.bind(this);
-        this.onChangeInventory = this.onChangeInventory.bind(this);
-        this.onChangeDate_Added = this.onChangeDate_Added.bind(this);
+        this.onChangePhoto = this.onChangePhoto.bind(this);
+        this.onChangeRetailPrice = this.onChangeRetailPrice.bind(this);
+        this.onChangeCostPrice = this.onChangeCostPrice.bind(this);
+        this.onChangeLikeNewPrice = this.onChangeLikeNewPrice.bind(this);
+        this.onChangeType = this.onChangeType.bind(this);
+        this.onChangeDateAcquired = this.onChangeDateAcquired.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             name: '',
             description: '',
             brand: '',
-            new_price: 0,
-            used_price: 0,
-            trial_price: 0,
-            inventory: 0,
-            date_added: new Date(),
+            photo: '',
+            retail_price: 0,
+            cost_price: 0,
+            likenew_price: 0,
+            type: '',
+            date_acquired: new Date(),
         }
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/users/')
+        axios.get('http://localhost:3000/users/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -59,29 +61,34 @@ export default class CreateProduct extends Component {
             brand: e.target.value
         });
     }
-    onChangeNewPrice(e) {
+    onChangePhoto(e) {
         this.setState({
-            new_price: e.target.value
+            photo: e.target.value
         });
     }
-    onChangeUsedPrice(e) {
+    onChangeRetailPrice(e) {
         this.setState({
-            used_price: e.target.value
+            retail_price: e.target.value
         });
     }
-    onChangeTrialPrice(e) {
+    onChangeCostPrice(e) {
         this.setState({
-            trial_price: e.target.value
+            cost_price: e.target.value
         });
     }
-    onChangeInventory(e) {
+    onChangeLikeNewPrice(e) {
         this.setState({
-            inventory: e.target.value
+            likenew_price: e.target.value
         });
     }
-    onChangeDate_Added(date) {
+    onChangeType(e) {
         this.setState({
-            date_added: date
+            type: e.target.value
+        });
+    }
+    onChangeDateAcquired(date) {
+        this.setState({
+            date_acquired: date
         });
     }
 
@@ -91,15 +98,16 @@ export default class CreateProduct extends Component {
             name: this.state.name,
             description: this.state.description,
             brand: this.state.brand,
-            new_price: this.state.new_price,
-            used_price: this.state.used_price,
-            trial_price: this.state.trial_price,
-            inventory: this.state.inventory,
-            date_added: this.state.date_added,
+            photo: this.state.photo,
+            retail_price: this.state.retail_price,
+            cost_price: this.state.cost_price,
+            likenew_price: this.state.likenew_price,
+            type: this.state.type,
+            date_acquired: this.state.date_acquired,
         };
         console.log(product);
 
-        axios.post('http://localhost:5000/products/add', product)
+        axios.post('http://localhost:3000/products/add', product)
             .then(res => console.log(res.data));
         window.location = '/';
     }
@@ -138,47 +146,56 @@ export default class CreateProduct extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>New Price</label>
-                        <input
-                            type="number"
+                        <label>Photo: </label>
+                        <input type="text"
+                            required
                             className="form-control"
-                            value={this.state.new_price}
-                            onChange={this.onChangeNewPrice}
+                            value={this.state.photo}
+                            onChange={this.onChangePhoto}
                         />
                     </div>
                     <div className="form-group">
-                        <label>Used Price</label>
+                        <label>Retail Price</label>
                         <input
                             type="number"
                             className="form-control"
-                            value={this.state.used_price}
-                            onChange={this.onChangeUsedPrice}
+                            value={this.state.retail_price}
+                            onChange={this.onChangeRetailPrice}
                         />
                     </div>
                     <div className="form-group">
-                        <label>Trial Price</label>
+                        <label>Cost Price</label>
                         <input
                             type="number"
                             className="form-control"
-                            value={this.state.trial_price}
-                            onChange={this.onChangeTrialPrice}
+                            value={this.state.cost_price}
+                            onChange={this.onChangeCostPrice}
                         />
                     </div>
                     <div className="form-group">
-                        <label>Inventory</label>
+                        <label>Type: </label>
+                        <input type="text"
+                            required
+                            className="form-control"
+                            value={this.state.type}
+                            onChange={this.onChangeType}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Like New Price</label>
                         <input
                             type="number"
                             className="form-control"
-                            value={this.state.inventory}
-                            onChange={this.onChangeInventory}
+                            value={this.state.likenew_price}
+                            onChange={this.onChangeLikeNewPrice}
                         />
                     </div>
                     <div className="form-group">
-                        <label>Date: </label>
+                        <label>Date Acquired: </label>
                         <div>
                             <DatePicker
-                                selected={this.state.date_added}
-                                onChange={this.onChangeDate_Added}
+                                selected={this.state.date_acquired}
+                                onChange={this.onChangeDateAcquired}
                             />
                         </div>
                     </div>

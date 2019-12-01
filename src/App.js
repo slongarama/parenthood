@@ -22,7 +22,7 @@ function App() {
           <Route path="/shop" component={ProductsList} />
           <Route path="/view/:id" component={ProductCard} />
           <Route path="/edit/:id" component={EditProduct} />
-          <Route path="/create" component={CreateProduct} />
+          <Route path="/add" component={CreateProduct} />
           <Route path="/user" component={CreateUser} />
         </Switch>
         <StickyFooter />
