@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 
-
 const useStyles = makeStyles(theme => ({
   '@global': {
     ul: {
@@ -46,6 +45,9 @@ export default function Pricing() {
             </Link>
           </Typography>
           <nav>
+            <Link variant="button" color="textPrimary" href="/add" className={classes.link}>
+              Add Product*
+            </Link>
             <Link variant="button" color="textPrimary" href="/shop" className={classes.link}>
               Shop
             </Link>
