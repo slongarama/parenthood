@@ -14,8 +14,9 @@ export default class CreateProduct extends Component {
         this.onChangeRetailPrice = this.onChangeRetailPrice.bind(this);
         this.onChangeCostPrice = this.onChangeCostPrice.bind(this);
         this.onChangeLikeNewPrice = this.onChangeLikeNewPrice.bind(this);
+        this.onChangeQuantity = this.onChangeQuantity.bind(this);
         this.onChangeType = this.onChangeType.bind(this);
-        this.onChangeDateAcquired = this.onChangeDateAcquired.bind(this);
+        this.onChangeDateUpdated = this.onChangeDateUpdated.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
@@ -26,8 +27,9 @@ export default class CreateProduct extends Component {
             retail_price: 0,
             cost_price: 0,
             likenew_price: 0,
+            quantity_available: 0,
             type: '',
-            date_acquired: new Date(),
+            date_updated: new Date(),
         }
     }
 
@@ -81,14 +83,19 @@ export default class CreateProduct extends Component {
             likenew_price: e.target.value
         });
     }
+    onChangeQuantity(e) {
+        this.setState({
+            quantity_available: e.target.value
+        });
+    }
     onChangeType(e) {
         this.setState({
             type: e.target.value
         });
     }
-    onChangeDateAcquired(date) {
+    onChangeDateUpdated(date) {
         this.setState({
-            date_acquired: date
+            date_updated: date
         });
     }
 
@@ -102,8 +109,9 @@ export default class CreateProduct extends Component {
             retail_price: this.state.retail_price,
             cost_price: this.state.cost_price,
             likenew_price: this.state.likenew_price,
+            quantity_available: this.state.quantity_available,
             type: this.state.type,
-            date_acquired: this.state.date_acquired,
+            date_updated: this.state.date_updated,
         };
         console.log(product);
 
@@ -137,9 +145,10 @@ export default class CreateProduct extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Brand</label>
+                        <label>Brand: </label>
                         <input
                             type="text"
+                            required
                             className="form-control"
                             value={this.state.brand}
                             onChange={this.onChangeBrand}
@@ -155,7 +164,7 @@ export default class CreateProduct extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Retail Price</label>
+                        <label>Retail Price: </label>
                         <input
                             type="number"
                             className="form-control"
@@ -164,12 +173,30 @@ export default class CreateProduct extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Cost Price</label>
+                        <label>Cost Price: </label>
                         <input
                             type="number"
                             className="form-control"
                             value={this.state.cost_price}
                             onChange={this.onChangeCostPrice}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Like New Price: </label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            value={this.state.likenew_price}
+                            onChange={this.onChangeLikeNewPrice}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Quantity: </label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            value={this.state.quantity_available}
+                            onChange={this.onChangeQuantity}
                         />
                     </div>
                     <div className="form-group">
@@ -182,20 +209,11 @@ export default class CreateProduct extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Like New Price</label>
-                        <input
-                            type="number"
-                            className="form-control"
-                            value={this.state.likenew_price}
-                            onChange={this.onChangeLikeNewPrice}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Date Acquired: </label>
+                        <label>Date: </label>
                         <div>
                             <DatePicker
-                                selected={this.state.date_acquired}
-                                onChange={this.onChangeDateAcquired}
+                                selected={this.state.date_updated}
+                                onChange={this.onChangeDateUpdated}
                             />
                         </div>
                     </div>

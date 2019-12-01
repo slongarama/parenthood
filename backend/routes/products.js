@@ -17,6 +17,7 @@ router.route('/add').post((req, res) => {
   const likenew_price = Number(req.body.likenew_price);
   // const preloved_price = Number(req.body.preloved_price);
   // const resell_price = Number(req.body.resell_price);
+  const quantity_available = Number(req.body.quantity_available);
   // const model_number = Number(req.body.model_number);
   // const release_date = Date.parse(req.body.release_date);
   // const weight = Number.parse(req.body.weight);
@@ -24,7 +25,7 @@ router.route('/add').post((req, res) => {
   // const height = Number.parse(req.body.height);
   // const depth = Number.parse(req.body.depth);
   const type = req.body.type;
-  const date_acquired = Date.parse(req.body.date_acquired);
+  const date_updated = Date.parse(req.body.date_updated);
 
   const newProduct = new Product({
     name: name,
@@ -38,6 +39,7 @@ router.route('/add').post((req, res) => {
       // preloved_price: preloved_price,
       // resell_price: resell_price
     },
+    quantity_available : quantity_available,
     // manufacture_details: {
     //   model_number: model_number,
     //   release_date: release_date
@@ -53,12 +55,7 @@ router.route('/add').post((req, res) => {
       brand: brand,
       product_type: type
     },
-    product_history: {
-      acquiring_history: {
-        date_acquired: date_acquired
-      }
-    }
-
+    date_updated: date_updated
   });
 
   newProduct.save()
@@ -98,11 +95,12 @@ router.route('/update/:id').post((req, res) => {
       product.description = req.body.description;
       product.brand = req.body.brand;
       product.photo = req.body.photo;
-      product.retail_price = Number(req.body.retail_price);
-      product.cost_price = Number(req.body.cost_price);
-      product.likenew_price = Number(req.body.likenew_price);
+      product.pricing.retail_price = Number(req.body.retail_price);
+      product.pricing.cost_price = Number(req.body.cost_price);
+      product.pricing.likenew_price = Number(req.body.likenew_price);
       // product.preloved_price = Number(req.body.preloved_price);
       // product.resell_price = Number(req.body.resell_price);
+      product.quantity_available = Number(req.body.quantity_available);
       // product.model_number = Number(req.body.model_number);
       // product.release_date = Date.parse(req.body.release_date);
       // product.weight = Number.parse(req.body.weight);
@@ -110,7 +108,7 @@ router.route('/update/:id').post((req, res) => {
       // const height = Number.parse(req.body.height);
       // const depth = Number.parse(req.body.depth);
       product.type = req.body.type;
-      product.date_acquired = Date.parse(req.body.date_acquired);
+      product.date_updated = Date.parse(req.body.date_updated);
 
       product.save()
         .then(() => res.json('Product updated!'))
