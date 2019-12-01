@@ -10,7 +10,7 @@ export default class ProductsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/products/')
+    axios.get('http://localhost:5000/products/')
       .then(response => {
         this.setState({ products: response.data });
       })
