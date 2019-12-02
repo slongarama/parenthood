@@ -157,7 +157,6 @@ export default class CreateProduct extends Component {
                     <div className="form-group">
                         <label>Photo: </label>
                         <input type="text"
-                            required
                             className="form-control"
                             value={this.state.photo}
                             onChange={this.onChangePhoto}
@@ -167,6 +166,7 @@ export default class CreateProduct extends Component {
                         <label>Retail Price: </label>
                         <input
                             type="number"
+                            required
                             className="form-control"
                             value={this.state.retail_price}
                             onChange={this.onChangeRetailPrice}
@@ -185,6 +185,7 @@ export default class CreateProduct extends Component {
                         <label>Like New Price: </label>
                         <input
                             type="number"
+                            required
                             className="form-control"
                             value={this.state.likenew_price}
                             onChange={this.onChangeLikeNewPrice}
@@ -194,6 +195,7 @@ export default class CreateProduct extends Component {
                         <label>Quantity: </label>
                         <input
                             type="number"
+                            required
                             className="form-control"
                             value={this.state.quantity_available}
                             onChange={this.onChangeQuantity}
@@ -202,7 +204,6 @@ export default class CreateProduct extends Component {
                     <div className="form-group">
                         <label>Type: </label>
                         <input type="text"
-                            required
                             className="form-control"
                             value={this.state.type}
                             onChange={this.onChangeType}

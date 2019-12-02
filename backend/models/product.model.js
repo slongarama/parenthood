@@ -24,9 +24,9 @@ const productSchema = new Schema({
 	quantity_available:  { type: Number, required: true },
 
 	pricing: {
-		retail_price: { type: Number },//, required: true },
+		retail_price: { type: Number, required: true },
 		cost_price: { type: Number },//, required: true }, //internal use
-		likenew_price: { type: Number },//, required: true },
+		likenew_price: { type: Number, required: true },
 		preloved_price: { type: Number }, //for later
 		resell_price: { type: Number } //for later
 	},
