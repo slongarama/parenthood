@@ -57,26 +57,23 @@ class ProductsList extends Component {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image="https://source.unsplash.com/random"
-                  title="Image title"
+                  image={product.photo}
+                  title={product.name}
                 />
                 <CardContent className={classes.cardContent}>
                   <Typography gutterBottom variant="h5" component="h2">
                     {product.name}
                   </Typography>
-                  <Typography>
-                    {product.description}
+                  <Typography gutterBottom variant="h7" component="h5" >
+                    ${product.pricing.likenew_price}/month
                   </Typography>
                   <Typography>
-                    {product.used_price}
+                    {product.description}
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <Button size="small" color="primary" href={"/view/" + product._id}>
                     View
-                    </Button>
-                  <Button size="small" color="primary">
-                    Edit
                     </Button>
                 </CardActions>
               </Card>

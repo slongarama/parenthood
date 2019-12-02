@@ -26,7 +26,7 @@ export default class ProductCard extends Component {
                     <h2 className="Product-title">{this.state.product.name}</h2>
                 </div>
                 <div className="product__description">
-                    {this.state.product.description}
+                    ${this.state.product.description}/month
                 </div>
             </div>
         )
