@@ -11,21 +11,51 @@ router.route('/add').post((req, res) => {
   const name = req.body.name;
   const description = req.body.description;
   const brand = req.body.brand;
-  const new_price = Number(req.body.new_price);
-  const used_price = Number(req.body.used_price);
-  const trial_price = Number(req.body.trial_price);
-  const inventory = Number(req.body.inventory);
-  const date_added = Date.parse(req.body.date_added);
+  const photo_name = req.body.photo;
+  const retail_price = Number(req.body.retail_price);
+  const cost_price = Number(req.body.cost_price);
+  const likenew_price = Number(req.body.likenew_price);
+  // const preloved_price = Number(req.body.preloved_price);
+  // const resell_price = Number(req.body.resell_price);
+  const quantity_available = Number(req.body.quantity_available);
+  // const model_number = Number(req.body.model_number);
+  // const release_date = Date.parse(req.body.release_date);
+  // const weight = Number.parse(req.body.weight);
+  // const width = Number.parse(req.body.width);
+  // const height = Number.parse(req.body.height);
+  // const depth = Number.parse(req.body.depth);
+  const type = req.body.type;
+  const date_updated = Date.parse(req.body.date_updated);
 
   const newProduct = new Product({
-    name,
-    description,
-    brand,
-    new_price,
-    used_price,
-    trial_price,
-    inventory,
-    date_added,
+    name: name,
+    description: description,
+    brand: brand,
+    photo: photo_name,
+    pricing: {
+      retail_price: retail_price,
+      cost_price: cost_price,
+      likenew_price: likenew_price,
+      // preloved_price: preloved_price,
+      // resell_price: resell_price
+    },
+    quantity_available : quantity_available,
+    // manufacture_details: {
+    //   model_number: model_number,
+    //   release_date: release_date
+    // },
+    // shipping_details: {
+    //   weight: weight,
+      // width: width,
+      // height: height,
+      // depth: depth,
+    // },
+    tags: {
+      // price_range: price_range,
+      brand: brand,
+      product_type: type
+    },
+    date_updated: date_updated
   });
 
   newProduct.save()
@@ -64,14 +94,25 @@ router.route('/update/:id').post((req, res) => {
       product.name = req.body.name;
       product.description = req.body.description;
       product.brand = req.body.brand;
-      product.new_price = Number(req.body.new_price);
-      product.used_price = Number(req.body.used_price);
-      product.trial_price = Number(req.body.trial_price);
-      product.inventory = Number(req.body.inventory);
-      product.date_added = Date.parse(req.body.date_added);
+      product.photo = req.body.photo;
+      product.pricing.retail_price = Number(req.body.retail_price);
+      product.pricing.cost_price = Number(req.body.cost_price);
+      product.pricing.likenew_price = Number(req.body.likenew_price);
+      // product.preloved_price = Number(req.body.preloved_price);
+      // product.resell_price = Number(req.body.resell_price);
+      product.quantity_available = Number(req.body.quantity_available);
+      // product.model_number = Number(req.body.model_number);
+      // product.release_date = Date.parse(req.body.release_date);
+      // product.weight = Number.parse(req.body.weight);
+      // const width = Number.parse(req.body.width);
+      // const height = Number.parse(req.body.height);
+      // const depth = Number.parse(req.body.depth);
+      product.type = req.body.type;
+      product.date_updated = Date.parse(req.body.date_updated);
 
       product.save()
         .then(() => res.json('Product updated!'))
+        // .then(() => console.log('Submitted'))
         .catch(err => res.status(400).json('Error: ' + err));
     })
     .catch(err => res.status(400).json('Error: ' + err));
