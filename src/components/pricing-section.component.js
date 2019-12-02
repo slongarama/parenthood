@@ -6,27 +6,20 @@ import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import StarIcon from '@material-ui/icons/StarBorder';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Website
-            </Link>
-            {' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
-
 const useStyles = makeStyles(theme => ({
+    '@global': {
+        ul: {
+            margin: 0,
+            padding: 0,
+        },
+        li: {
+            listStyle: 'none',
+        },
+    },
     cardHeader: {
         backgroundColor:
             theme.palette.type === 'dark' ? theme.palette.grey[700] : theme.palette.grey[200],
@@ -37,24 +30,15 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'baseline',
         marginBottom: theme.spacing(2),
     },
+    pricingContainer: {
+        marginTop: 60,
+        marginBottom: 60,
+    },
 }));
 
 const tiers = [
     {
-        title: 'Rent New',
-        subheader: '',
-        price: '20',
-        description: [
-            'Get brand new gear',
-            'Use for as long as you need',
-            'Pay as you go',
-            'Free shipping',
-        ],
-        buttonText: 'Sign up for free',
-        buttonVariant: 'outlined',
-    },
-    {
-        title: 'Rent Used',
+        title: 'Rent Pre-Loved',
         subheader: '',
         price: '15',
         description: [
@@ -63,20 +47,33 @@ const tiers = [
             'Pay as you go',
             'Free shipping'
         ],
-        buttonText: 'Get started',
+        buttonText: 'Coming Soon',
+        buttonVariant: 'outlined',
+    },
+    {
+        title: 'Rent (Like) New',
+        subheader: '',
+        price: '20',
+        description: [
+            'Get like new gear',
+            'Use for as long as you need',
+            'Pay as you go',
+            'Free shipping',
+        ],
+        buttonText: 'Get started now',
         buttonVariant: 'contained',
     },
     {
-        title: 'Buy Used',
+        title: 'Buy Pre-Loved',
         subheader: '',
         price: '30',
         description: [
-            'Used gear in great condition',
+            'Pre-loved gear in great condition',
             'Fraction of the price',
             'Phone & email support',
             'Free shipping',
         ],
-        buttonText: 'Contact us',
+        buttonText: 'Coming Soon',
         buttonVariant: 'outlined',
     },
 ];
@@ -87,7 +84,7 @@ export default function Pricing() {
     return (
         <React.Fragment>
             <CssBaseline />
-            <Container maxWidth="md" component="main">
+            <Container maxWidth="md" component="main" className={classes.pricingContainer}>
                 <Grid container spacing={5} alignItems="flex-end">
                     {tiers.map(tier => (
                         // Enterprise card is full width at sm breakpoint

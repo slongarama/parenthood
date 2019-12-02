@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 import Navbar from "./components/navbar.component"
 import LandingPage from "./components/landing-page.component"
@@ -14,9 +14,15 @@ import StickyFooter from "./components/sticky-footer.component"
 function App() {
   return (
     <Router>
-      <div className="container">
+      <div className="container" style={{
+        marginLeft: 0,
+        marginRight: 0,
+        maxWidth: 'initial',
+        paddingLeft: 0,
+        paddingRight: 0,
+        backgroundColor: 'white',
+      }}>
         <Navbar />
-        <br />
         <Switch>
           <Route path="/" exact component={LandingPage} />
           <Route path="/shop" component={ProductsList} />
@@ -27,7 +33,7 @@ function App() {
         </Switch>
         <StickyFooter />
       </div>
-    </Router>
+    </Router >
   );
 }
 
