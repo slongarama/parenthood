@@ -24,7 +24,7 @@ function App() {
       }}>
         <Navbar />
         <Switch>
-          <Route path="/" exact component={LandingPage} />
+          <Route exact path="/" component={LandingPage} />
           <Route path="/shop" component={ProductsList} />
           <Route path="/view/:id" component={ProductCard} />
           <Route path="/edit/:id" component={EditProduct} />

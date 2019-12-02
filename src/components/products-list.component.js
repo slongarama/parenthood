@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import '../styles/components/products-list.css'
@@ -50,11 +51,21 @@ class ProductsList extends Component {
           {this.state.products.map(product => (
             <Grid item key={product._ID} xs={12} sm={6} md={4}>
               <div className="media-03819">
-                <a href={"/view/" + product._id} className="img-link"><img src={product.photo} alt="" className="img-fluid" /></a>
-                <h3><a href={"/view/" + product._id}>{product.name}</a></h3>
+                <Link className="nav-link img-link" to={"/view/" + product._id}>
+                  <img src={product.photo} alt="" className="img-fluid" />
+                </Link>
+                <h3>
+                  <Link className="nav-link" color="textPrimary" to={"/view/" + product._id}>
+                    {product.name}
+                  </Link>
+                </h3>
                 <p>${product.pricing.likenew_price}/month</p>
                 <span>{product.description}</span>
-                <p className="mb-0 mt-4"><a href={"/view/" + product._id} className="btn btn-primary">View More</a></p>
+                <p className="mb-0 mt-4">
+                  <Link className="nav-link" className="btn btn-primary" color="textPrimary" to={"/view/" + product._id}>
+                    View More
+                  </Link>
+                </p>
               </div>
             </Grid>
           ))}
