@@ -18,10 +18,10 @@ export default function StickyFooter() {
                                 <h2 className="footer-heading mb-4">Features</h2>
                                 <ul className="list-unstyled">
                                     <li><a href="/about-us">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                    <li><a href="#">Terms of Service</a></li>
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="/">Testimonials</a></li>
+                                    <li><a href="/">Terms of Service</a></li>
+                                    <li><a href="/">Privacy</a></li>
+                                    <li><a href="/">Contact Us</a></li>
                                 </ul>
                             </div>
 
@@ -43,9 +43,9 @@ export default function StickyFooter() {
 
                                 <h2 className="footer-heading mb-4">Follow Us</h2>
                                 <a href="#about-section" className="smoothscroll pl-0 pr-3"><span className="icon-facebook"></span></a>
-                                <a href="#" className="pl-3 pr-3"><span className="icon-twitter"></span></a>
-                                <a href="#" className="pl-3 pr-3"><span className="icon-instagram"></span></a>
-                                <a href="#" className="pl-3 pr-3"><span className="icon-linkedin"></span></a>
+                                <a href="/" className="pl-3 pr-3"><span className="icon-twitter"></span></a>
+                                <a href="/" className="pl-3 pr-3"><span className="icon-instagram"></span></a>
+                                <a href="/" className="pl-3 pr-3"><span className="icon-linkedin"></span></a>
                             </form>
                         </div>
                     </div>

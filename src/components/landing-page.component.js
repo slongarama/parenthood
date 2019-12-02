@@ -27,37 +27,37 @@ export default class LandingPage extends Component {
                                     <h2 className="heading-39291 mb-0">Our Work</h2>
                                 </div>
                                 <div className="col-md-5 text-right">
-                                    <p className="mb-0"><a href="#" className="more-39291">View All Works</a></p>
+                                    <p className="mb-0"><a href="/" className="more-39291">View All Works</a></p>
                                 </div>
                             </div>
 
                             <div className="row">
                                 <div className="col-lg-6">
                                     <div className="media-02819">
-                                        <a href="#" className="img-link"><img src="images/img_1.jpg" alt="Image" className="img-fluid" /></a>
-                                        <h3><a href="#">Creative Modern House</a></h3>
+                                        <a href="/" className="img-link"><img src="images/img_1.jpg" alt="" className="img-fluid" /></a>
+                                        <h3><a href="/">Creative Modern House</a></h3>
                                         <span>New York City, USA</span>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="media-02819">
-                                        <a href="#" className="img-link"><img src="images/img_2.jpg" alt="Image" className="img-fluid" /></a>
-                                        <h3><a href="#">Creative Modern House</a></h3>
+                                        <a href="/" className="img-link"><img src="images/img_2.jpg" alt="" className="img-fluid" /></a>
+                                        <h3><a href="/">Creative Modern House</a></h3>
                                         <span>New York City, USA</span>
                                     </div>
                                 </div>
 
                                 <div className="col-lg-6">
                                     <div className="media-02819">
-                                        <a href="#" className="img-link"><img src="images/img_3.jpg" alt="Image" className="img-fluid" /></a>
-                                        <h3><a href="#">Creative Modern House</a></h3>
+                                        <a href="/" className="img-link"><img src="images/img_3.jpg" alt="" className="img-fluid" /></a>
+                                        <h3><a href="/">Creative Modern House</a></h3>
                                         <span>New York City, USA</span>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="media-02819">
-                                        <a href="#" className="img-link"><img src="images/img_4.jpg" alt="Image" className="img-fluid" /></a>
-                                        <h3><a href="#">Creative Modern House</a></h3>
+                                        <a href="/" className="img-link"><img src="images/img_4.jpg" alt="" className="img-fluid" /></a>
+                                        <h3><a href="/">Creative Modern House</a></h3>
                                         <span>New York City, USA</span>
                                     </div>
                                 </div>
@@ -80,18 +80,18 @@ export default class LandingPage extends Component {
                                 <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                                     <div className="service-29193 text-center">
                                         <span className="img-wrap mb-5">
-                                            <img src="fonts/flaticon/svg/002-kitchen.svg" alt="Image" className="img-fluid" />
+                                            <img src="fonts/flaticon/svg/002-kitchen.svg" alt="" className="img-fluid" />
                                         </span>
-                                        <h3 className="mb-4"><a href="#">Reiciendis Velit</a></h3>
+                                        <h3 className="mb-4"><a href="/">Reiciendis Velit</a></h3>
                                         <p>Lorem ipsum dolor sit ame adipisicing elit. Perspiciatis incidunt distinctio voluptate .</p>
                                     </div>
                                 </div>
                                 <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                                     <div className="service-29193 text-center">
                                         <span className="img-wrap mb-5">
-                                            <img src="fonts/flaticon/svg/003-lamp.svg" alt="Image" className="img-fluid" />
+                                            <img src="fonts/flaticon/svg/003-lamp.svg" alt="" className="img-fluid" />
                                         </span>
-                                        <h3 className="mb-4"><a href="#">Incidunt Distinctio</a></h3>
+                                        <h3 className="mb-4"><a href="/">Incidunt Distinctio</a></h3>
                                         <p>Lorem ipsum dolor sit ame adipisicing elit. Perspiciatis incidunt distinctio voluptate .</p>
                                     </div>
                                 </div>
@@ -99,9 +99,9 @@ export default class LandingPage extends Component {
                                 <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
                                     <div className="service-29193 text-center">
                                         <span className="img-wrap mb-5">
-                                            <img src="fonts/flaticon/svg/001-stairs.svg" alt="Image" className="img-fluid" />
+                                            <img src="fonts/flaticon/svg/001-stairs.svg" alt="" className="img-fluid" />
                                         </span>
-                                        <h3 className="mb-4"><a href="#">Reiciendis Velit Iure</a></h3>
+                                        <h3 className="mb-4"><a href="/">Reiciendis Velit Iure</a></h3>
                                         <p>Lorem ipsum dolor sit ame adipisicing elit. Perspiciatis incidunt distinctio voluptate .</p>
                                     </div>
                                 </div>
@@ -109,27 +109,27 @@ export default class LandingPage extends Component {
                                 <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
                                     <div className="service-29193 text-center">
                                         <span className="img-wrap mb-5">
-                                            <img src="fonts/flaticon/svg/004-blueprint.svg" alt="Image" className="img-fluid" />
+                                            <img src="fonts/flaticon/svg/004-blueprint.svg" alt="" className="img-fluid" />
                                         </span>
-                                        <h3 className="mb-4"><a href="#">Boluptate Ipsum</a></h3>
+                                        <h3 className="mb-4"><a href="/">Boluptate Ipsum</a></h3>
                                         <p>Lorem ipsum dolor sit ame adipisicing elit. Perspiciatis incidunt distinctio voluptate .</p>
                                     </div>
                                 </div>
                                 <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                                     <div className="service-29193 text-center">
                                         <span className="img-wrap mb-5">
-                                            <img src="fonts/flaticon/svg/006-pantone.svg" alt="Image" className="img-fluid" />
+                                            <img src="fonts/flaticon/svg/006-pantone.svg" alt="" className="img-fluid" />
                                         </span>
-                                        <h3 className="mb-4"><a href="#">Modern Elit</a></h3>
+                                        <h3 className="mb-4"><a href="/">Modern Elit</a></h3>
                                         <p>Lorem ipsum dolor sit ame adipisicing elit. Perspiciatis incidunt distinctio voluptate .</p>
                                     </div>
                                 </div>
                                 <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                                     <div className="service-29193 text-center">
                                         <span className="img-wrap mb-5">
-                                            <img src="fonts/flaticon/svg/005-dinning-table.svg" alt="Image" className="img-fluid" />
+                                            <img src="fonts/flaticon/svg/005-dinning-table.svg" alt="" className="img-fluid" />
                                         </span>
-                                        <h3 className="mb-4"><a href="#">Dolor Sitame</a></h3>
+                                        <h3 className="mb-4"><a href="/">Dolor Sitame</a></h3>
                                         <p>Lorem ipsum dolor sit ame adipisicing elit. Perspiciatis incidunt distinctio voluptate .</p>
                                     </div>
                                 </div>

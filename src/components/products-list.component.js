@@ -2,14 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import '../styles/components/products-list.css'
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
@@ -57,11 +50,11 @@ class ProductsList extends Component {
           {this.state.products.map(product => (
             <Grid item key={product._ID} xs={12} sm={6} md={4}>
               <div className="media-03819">
-                  <a href={ "/view/" + product._id } className="img-link"><img src={product.photo} alt="Image" className="img-fluid" /></a>
-                  <h3><a href={ "/view/" + product._id }>{ product.name }</a></h3>
-                  <p>${ product.pricing.likenew_price }/month</p>
-                  <span>{ product.description }</span>
-                  <p className="mb-0 mt-4"><a href={"/view/" + product._id} className="btn btn-primary">View More</a></p>
+                <a href={"/view/" + product._id} className="img-link"><img src={product.photo} alt="" className="img-fluid" /></a>
+                <h3><a href={"/view/" + product._id}>{product.name}</a></h3>
+                <p>${product.pricing.likenew_price}/month</p>
+                <span>{product.description}</span>
+                <p className="mb-0 mt-4"><a href={"/view/" + product._id} className="btn btn-primary">View More</a></p>
               </div>
             </Grid>
           ))}

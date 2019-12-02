@@ -27,7 +27,7 @@ export default function Navbar() {
             </div>
 
 
-            <div className="ml-auto toggle-button d-inline-block d-lg-none"><a href="#" className="site-menu-toggle py-5 js-menu-toggle text-white"><span className="icon-menu h3 text-primary"></span></a></div>
+            <div className="ml-auto toggle-button d-inline-block d-lg-none"><a href="/" className="site-menu-toggle py-5 js-menu-toggle text-white"><span className="icon-menu h3 text-primary"></span></a></div>
           </div>
           <div className="col-lg-4">
             <nav className="site-navigation text-right mr-auto " role="navigation">
