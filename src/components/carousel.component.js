@@ -12,9 +12,9 @@ export default function Carousel() {
             </div>
 
             <div className="owl-carousel owl-1 ">
-                <div className="ftco-cover-1" style={{ backgroundImage: "url('images/about_1.jpg')" }}></div>
                 <div className="ftco-cover-1" style={{ backgroundImage: "url('images/hero_1.jpg')" }}></div>
                 <div className="ftco-cover-1" style={{ backgroundImage: "url('images/hero_2.jpg')" }}></div>
+                <div className="ftco-cover-1" style={{ backgroundImage: "url('images/hero_3.jpg')" }}></div>
             </div>
         </div>
     )

@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -16,13 +17,13 @@ const styles = theme => ({
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
-    backgroundColor: '#bbcbef',
+    // backgroundColor: '#bbcbef',
   },
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
+  // card: {
+  //   height: '100%',
+  //   display: 'flex',
+  //   flexDirection: 'column',
+  // },
   cardMedia: {
     paddingTop: '56.25%', // 16:9
   },
@@ -52,32 +53,16 @@ class ProductsList extends Component {
 
     return (
       <Container className={classes.cardGrid} maxWidth="md">
-        <Grid container spacing={4}>
+        <Grid container spacing={6}>
           {this.state.products.map(product => (
             <Grid item key={product._ID} xs={12} sm={6} md={4}>
-              <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image={product.photo}
-                  title={product.name}
-                />
-                <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {product.name}
-                  </Typography>
-                  <Typography gutterBottom variant="h7" component="h5" >
-                    ${product.pricing.likenew_price}/month
-                  </Typography>
-                  <Typography>
-                    {product.description}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary" href={"/view/" + product._id}>
-                    View
-                    </Button>
-                </CardActions>
-              </Card>
+              <div className="media-03819">
+                  <a href={ "/view/" + product._id } className="img-link"><img src={product.photo} alt="Image" className="img-fluid" /></a>
+                  <h3><a href={ "/view/" + product._id }>{ product.name }</a></h3>
+                  <p>${ product.pricing.likenew_price }/month</p>
+                  <span>{ product.description }</span>
+                  <p className="mb-0 mt-4"><a href={"/view/" + product._id} className="btn btn-primary">View More</a></p>
+              </div>
             </Grid>
           ))}
         </Grid>
@@ -88,7 +73,7 @@ class ProductsList extends Component {
   render() {
     return (
       <div className="ProductList">
-        <h2 className="ProductList-title">Our Shop ({this.state.products.length})</h2>
+        <h3 className="ProductList-title">Our Shop ({this.state.products.length})</h3>
         <div className="ProductList-container">
           {this.LoadAllCards()}
         </div>
