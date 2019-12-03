@@ -1701,6 +1701,20 @@ h1, h2, h3, h4, h5,
   .media-03819 span {
     font-size: 14px; }
 
+.info-icon {
+  text-align: center;
+}
+.info-icon .icon {
+  font-size: 62px;
+  line-height: 66px;
+  color: #c5a47e;
+  margin-bottom: 10px;
+}
+.info-icon .description {
+  margin-top: 15px;
+  color: #777777;
+}
+
 .service-29193 {
   background: #fff;
   padding: 50px 30px; }

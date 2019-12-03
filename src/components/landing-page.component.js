@@ -22,43 +22,32 @@ export default class LandingPage extends Component {
 
                     <div className="site-section">
                         <div className="container">
-                            <div className="row mb-5 align-items-center">
-                                <div className="col-md-7">
-                                    <h2 className="heading-39291 mb-0">Our Work</h2>
-                                </div>
-                                <div className="col-md-5 text-right">
-                                    <p className="mb-0"><a href="/" className="more-39291">View All Works</a></p>
+                            <div className="mb-5 align-items-center">
+                                <div className="text-center">
+                                    <h2 >How it Works</h2>
                                 </div>
                             </div>
 
                             <div className="row">
-                                <div className="col-lg-6">
-                                    <div className="media-02819">
-                                        <a href="/" className="img-link"><img src="images/img_1.jpg" alt="" className="img-fluid" /></a>
-                                        <h3><a href="/">Creative Modern House</a></h3>
-                                        <span>New York City, USA</span>
+                                <div className="col-md-4">
+                                    <div className="info-icon">
+                                        <img src="images/icon1.png" vspace="20" alt="" className="img-fluid" />
+                                        <h4>Pick your gear</h4>
+                                        <p> Select premium gear for your baby from our curated collection. Rent new or gently used, or buy used at a fraction of the price.</p>
                                     </div>
                                 </div>
-                                <div className="col-lg-6">
-                                    <div className="media-02819">
-                                        <a href="/" className="img-link"><img src="images/img_2.jpg" alt="" className="img-fluid" /></a>
-                                        <h3><a href="/">Creative Modern House</a></h3>
-                                        <span>New York City, USA</span>
+                                <div className="col-md-4">
+                                    <div className="info-icon">
+                                        <img src="images/icon2.png" vspace="20" alt="" className="img-fluid" />
+                                        <h4>Enjoy</h4>
+                                        <p>We deliver your gear right to your home and you can keep it for as long as you need. Pay only for the time you used it!</p>
                                     </div>
                                 </div>
-
-                                <div className="col-lg-6">
-                                    <div className="media-02819">
-                                        <a href="/" className="img-link"><img src="images/img_3.jpg" alt="" className="img-fluid" /></a>
-                                        <h3><a href="/">Creative Modern House</a></h3>
-                                        <span>New York City, USA</span>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="media-02819">
-                                        <a href="/" className="img-link"><img src="images/img_4.jpg" alt="" className="img-fluid" /></a>
-                                        <h3><a href="/">Creative Modern House</a></h3>
-                                        <span>New York City, USA</span>
+                                <div className="col-md-4">
+                                    <div className="info-icon">
+                                        <img src="images/icon3.png" vspace="20" alt="" className="img-fluid" />
+                                        <h4>Return!</h4>
+                                        <p>When your baby outgrows the gear, send it back to us and pick your next item. No more worrying about clutter or waste!</p>
                                     </div>
                                 </div>
 
@@ -69,76 +58,78 @@ export default class LandingPage extends Component {
 
                     <div className="site-section bg-primary">
                         <div className="container">
-                            <div className="row mb-5 align-items-center">
-                                <div className="col-md-7">
-                                    <h2 className="heading-39291 text-white mb-3">What We Do</h2>
-                                    <p className="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis velit iure possimus repellendus, esse minus illum nobis deleniti?</p>
+                            <div className="mb-5 align-items-center">
+                                <div className="text-center">
+                                    <h2 className="text-white mb-3">Our Process</h2>
                                 </div>
                             </div>
                             <div className="row">
+                                <div className="col-lg-6">
+                                    <img src="images/cycle.png" vspace="20" alt="" className="img-fluid" />
+                                </div>
+                                <div className="col-lg-6">
+                                    <h5 className="mb-0 mt-4 text-white"> Source </h5>
+                                    <p className="mb-0 mt-4 text-white">
+                                    The source of our incredible like new inventory is directly from manufacturers. We take any products that were returned to them in like new condition, usually because the original customer decided it didn't fit into their room.
+                                    </p>
+                                    <h5 className="mb-0 mt-4 text-white"> Restore </h5>
+                                    <p className="mb-0 mt-4 text-white">
+                                    All of our acquired products are rigorously checked to ensure their safety in the like new returned condition. Any restorations are performed as per the directions of the manufacturer.
+                                    </p>
+                                    <h5 className="mb-0 mt-4 text-white"> Cleaning </h5>
+                                    <p className="mb-0 mt-4 text-white">
+                                    All of our products go through a safe and rigorous deep-cleaning process to ensure the highest quality standards to your baby.
 
+Give your baby the best while saving your wallet and our planet! 
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="site-section bg-light">
+                        <div className="container">
+                            <div className="mb-5 align-items-center">
+                                <div className="text-center">
+                                    <h2 className="text-black mb-3">Three Ways to Make Parenthood Easier</h2>
+                                </div>
+                            </div>
+                            <div className="row">
                                 <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                                     <div className="service-29193 text-center">
-                                        <span className="img-wrap mb-5">
-                                            <img src="fonts/flaticon/svg/002-kitchen.svg" alt="" className="img-fluid" />
-                                        </span>
-                                        <h3 className="mb-4"><a href="/">Reiciendis Velit</a></h3>
-                                        <p>Lorem ipsum dolor sit ame adipisicing elit. Perspiciatis incidunt distinctio voluptate .</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                                    <div className="service-29193 text-center">
-                                        <span className="img-wrap mb-5">
-                                            <img src="fonts/flaticon/svg/003-lamp.svg" alt="" className="img-fluid" />
-                                        </span>
-                                        <h3 className="mb-4"><a href="/">Incidunt Distinctio</a></h3>
-                                        <p>Lorem ipsum dolor sit ame adipisicing elit. Perspiciatis incidunt distinctio voluptate .</p>
-                                    </div>
-                                </div>
-
-                                <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
-                                    <div className="service-29193 text-center">
-                                        <span className="img-wrap mb-5">
-                                            <img src="fonts/flaticon/svg/001-stairs.svg" alt="" className="img-fluid" />
-                                        </span>
-                                        <h3 className="mb-4"><a href="/">Reiciendis Velit Iure</a></h3>
-                                        <p>Lorem ipsum dolor sit ame adipisicing elit. Perspiciatis incidunt distinctio voluptate .</p>
-                                    </div>
-                                </div>
-
-                                <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
-                                    <div className="service-29193 text-center">
-                                        <span className="img-wrap mb-5">
-                                            <img src="fonts/flaticon/svg/004-blueprint.svg" alt="" className="img-fluid" />
-                                        </span>
-                                        <h3 className="mb-4"><a href="/">Boluptate Ipsum</a></h3>
-                                        <p>Lorem ipsum dolor sit ame adipisicing elit. Perspiciatis incidunt distinctio voluptate .</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                                    <div className="service-29193 text-center">
-                                        <span className="img-wrap mb-5">
-                                            <img src="fonts/flaticon/svg/006-pantone.svg" alt="" className="img-fluid" />
-                                        </span>
-                                        <h3 className="mb-4"><a href="/">Modern Elit</a></h3>
-                                        <p>Lorem ipsum dolor sit ame adipisicing elit. Perspiciatis incidunt distinctio voluptate .</p>
+                                        <h3><a href="/shop">Rent Preloved</a></h3>
+                                        <p>Gently used gear at a discount <br />
+                                            Rent as long as you need it <br />
+                                            Pay as you go <br />
+                                            Free shipping</p>
+                                        <p className="mb-0 mt-4"><a href="/shop" className="btn">Coming Soon</a></p>
                                     </div>
                                 </div>
                                 <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                                     <div className="service-29193 text-center">
-                                        <span className="img-wrap mb-5">
-                                            <img src="fonts/flaticon/svg/005-dinning-table.svg" alt="" className="img-fluid" />
-                                        </span>
-                                        <h3 className="mb-4"><a href="/">Dolor Sitame</a></h3>
-                                        <p>Lorem ipsum dolor sit ame adipisicing elit. Perspiciatis incidunt distinctio voluptate .</p>
+                                        <h3><a href="/shop">Rent Like New</a></h3>
+                                        <p>Get like new gear <br />
+                                            Use for as long as you need it <br />
+                                            Pay as you go <br />
+                                            Free shipping</p>
+                                        <p className="mb-0 mt-4"><a href="/shop" className="btn btn-primary">Rent Now</a></p>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div className="service-29193 text-center">
+                                        <h3><a href="/shop">Buy Pre-loved</a></h3>
+                                        <p> Pre-loved gear in great condition <br />
+                                            Fraction of the price <br />
+                                            Huge discounts <br />
+                                            Free shipping</p>
+                                        <p className="mb-0 mt-4"><a href="/shop" className="btn">Coming Soon</a></p>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-
-                    <Pricing></Pricing>
                     <TestimonialCarousel></TestimonialCarousel>
 
                 </div>

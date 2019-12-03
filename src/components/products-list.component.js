@@ -62,7 +62,7 @@ class ProductsList extends Component {
                 <p>${product.pricing.likenew_price}/month</p>
                 <span>{product.description}</span>
                 <p className="mb-0 mt-4">
-                  <Link className="nav-link" className="btn btn-primary" color="textPrimary" to={"/view/" + product._id}>
+                  <Link className="nav-link btn btn-primary" color="textPrimary" to={"/view/" + product._id}>
                     View More
                   </Link>
                 </p>
