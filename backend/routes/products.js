@@ -7,6 +7,18 @@ router.route('/').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/about-us').get((req, res) => {
+  Product.find()
+    .then(products => res.json(products))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/faq').get((req, res) => {
+  Product.find()
+    .then(products => res.json(products))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
 router.route('/add').post((req, res) => {
   const name = req.body.name;
   const description = req.body.description;
@@ -39,16 +51,16 @@ router.route('/add').post((req, res) => {
       // preloved_price: preloved_price,
       // resell_price: resell_price
     },
-    quantity_available : quantity_available,
+    quantity_available: quantity_available,
     // manufacture_details: {
     //   model_number: model_number,
     //   release_date: release_date
     // },
     // shipping_details: {
     //   weight: weight,
-      // width: width,
-      // height: height,
-      // depth: depth,
+    // width: width,
+    // height: height,
+    // depth: depth,
     // },
     tags: {
       // price_range: price_range,

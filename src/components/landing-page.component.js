@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Carousel from './carousel.component'
 import TestimonialCarousel from './testimonial-carousel.component'
-import Pricing from './pricing-section.component'
 
 export default class LandingPage extends Component {
     render() {
@@ -70,17 +69,17 @@ export default class LandingPage extends Component {
                                 <div className="col-lg-6">
                                     <h5 className="mb-0 mt-4 text-white"> Source </h5>
                                     <p className="mb-0 mt-4 text-white">
-                                    The source of our incredible like new inventory is directly from manufacturers. We take any products that were returned to them in like new condition, usually because the original customer decided it didn't fit into their room.
+                                        The source of our incredible like new inventory is directly from manufacturers. We take any products that were returned to them in like new condition, usually because the original customer decided it didn't fit into their room.
                                     </p>
                                     <h5 className="mb-0 mt-4 text-white"> Restore </h5>
                                     <p className="mb-0 mt-4 text-white">
-                                    All of our acquired products are rigorously checked to ensure their safety in the like new returned condition. Any restorations are performed as per the directions of the manufacturer.
+                                        All of our acquired products are rigorously checked to ensure their safety in the like new returned condition. Any restorations are performed as per the directions of the manufacturer.
                                     </p>
                                     <h5 className="mb-0 mt-4 text-white"> Cleaning </h5>
                                     <p className="mb-0 mt-4 text-white">
-                                    All of our products go through a safe and rigorous deep-cleaning process to ensure the highest quality standards to your baby.
-
-Give your baby the best while saving your wallet and our planet! 
+                                        All of our products go through a safe and rigorous deep-cleaning process to ensure the highest quality standards to your baby.
+    
+    Give your baby the best while saving your wallet and our planet!
                                     </p>
                                 </div>
                             </div>

@@ -11,15 +11,9 @@ const styles = theme => ({
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
-    // backgroundColor: '#bbcbef',
   },
-  // card: {
-  //   height: '100%',
-  //   display: 'flex',
-  //   flexDirection: 'column',
-  // },
   cardMedia: {
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '56.25%',
   },
   cardContent: {
     flexGrow: 1,

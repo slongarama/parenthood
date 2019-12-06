@@ -50,4 +50,3 @@ export default class ProductCard extends Component {
         )
     }
 }
-
