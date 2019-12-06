@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Redirect, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 import Navbar from "./components/navbar.component"
@@ -10,6 +10,8 @@ import EditProduct from "./components/edit-product.component";
 import CreateProduct from "./components/create-product.component";
 import CreateUser from "./components/create-user.component";
 import StickyFooter from "./components/sticky-footer.component"
+import AboutUs from './components/about-us.component'
+import FAQ from './components/faq.component'
 
 function App() {
   return (
@@ -30,6 +32,9 @@ function App() {
           <Route path="/edit/:id" component={EditProduct} />
           <Route path="/add" component={CreateProduct} />
           <Route path="/user" component={CreateUser} />
+          <Route path="/about-us" component={AboutUs} />
+          <Route path="/faq" component={FAQ} />
+          <Redirect to="/" />
         </Switch>
         <StickyFooter />
       </div>
