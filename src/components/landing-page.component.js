@@ -59,30 +59,12 @@ export default class LandingPage extends Component {
                         <div className="container">
                             <div className="mb-5 align-items-center">
                                 <div className="text-center">
-                                    <h2 className="text-white mb-3">Our Process</h2>
+                                    <h2 className="text-white mb-3">You can save up to 80% compared to normal retail price. </h2>
                                 </div>
                             </div>
-                            <div className="row">
-                                <div className="col-lg-6">
-                                    <img src="images/cycle.png" vspace="20" alt="" className="img-fluid" />
-                                </div>
-                                <div className="col-lg-6">
-                                    <h5 className="mb-0 mt-4 text-white"> Source </h5>
-                                    <p className="mb-0 mt-4 text-white">
-                                        The source of our incredible like new inventory is directly from manufacturers. We take any products that were returned to them in like new condition, usually because the original customer decided it didn't fit into their room.
-                                    </p>
-                                    <h5 className="mb-0 mt-4 text-white"> Restore </h5>
-                                    <p className="mb-0 mt-4 text-white">
-                                        All of our acquired products are rigorously checked to ensure their safety in the like new returned condition. Any restorations are performed as per the directions of the manufacturer.
-                                    </p>
-                                    <h5 className="mb-0 mt-4 text-white"> Cleaning </h5>
-                                    <p className="mb-0 mt-4 text-white">
-                                        All of our products go through a safe and rigorous deep-cleaning process to ensure the highest quality standards to your baby.
-    
-    Give your baby the best while saving your wallet and our planet!
-                                    </p>
-                                </div>
-                            </div>
+                            <p className="text-white text-center" >
+                                Thanks to our sustainable consumption model, items can be loved by different families and prices can be lowered for everyone.
+                            </p>
 
                         </div>
                     </div>
@@ -97,7 +79,7 @@ export default class LandingPage extends Component {
                             <div className="row">
                                 <div className="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                                     <div className="service-29193 text-center">
-                                        <h3><a href="/shop">Rent Preloved</a></h3>
+                                        <h3><a href="/shop">Rent Pre-loved</a></h3>
                                         <p>Gently used gear at a discount <br />
                                             Rent as long as you need it <br />
                                             Pay as you go <br />
@@ -133,7 +115,7 @@ export default class LandingPage extends Component {
                         <div className="container">
                             <div className="mb-5 align-items-center">
                                 <div className="text-center">
-                                    <h2 className="text-black mb-3">This is Parenthood</h2>
+                                    <h2 className="text-black mb-3">Why use Parenthood?</h2>
                                 </div>
                             </div>
                             <div className="row">
@@ -168,16 +150,13 @@ export default class LandingPage extends Component {
                                         <h3>Personalized</h3>
                                         <p> Get the best quality gear to help in 
                                         your baby’s development. Try out different
-                                        products and swap them out as many times as you want.
-</p>
+                                        products and swap them out as many times as you want.</p>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <TestimonialCarousel></TestimonialCarousel>
-
                 </div>
             </div>
         );

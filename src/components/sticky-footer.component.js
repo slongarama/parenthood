@@ -54,6 +54,10 @@ export default function StickyFooter() {
                     <div className="col-md-12">
                         <div className="pt-5">
                             <p>
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());
+                            </script> All rights reserved | This template is made with
+                            <a href="https://colorlib.com" target="_blank" > Colorlib</a>
                             </p>
                         </div>
                     </div>

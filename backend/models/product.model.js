@@ -43,6 +43,7 @@ const productSchema = new Schema({
 		last_checked: { type: Date }
 	},
 
+	exp_rental_period: { type: String },
 	number_rented:  { type: Number },
 	date_updated: { type: Date, required: true }
 

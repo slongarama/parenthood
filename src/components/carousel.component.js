@@ -3,10 +3,10 @@ import React from 'react';
 export default function Carousel() {
     return (
         <div className="owl-carousel-wrapper">
-            <div className="box-92819">
+            <div className="box-92819 ">
                 <div>
-                    <h1 className=" mb-3 text-white">Give your baby the best while saving your wallet and our planet.</h1>
-                    <p className="text-white" > Rent premium baby gear with Parenthood. </p>
+                    <h1 className=" mb-3 text-black">Give your baby the best while saving your wallet and our planet.</h1>
+                    <p className="text-black" > Rent premium baby gear with Parenthood. </p>
                     <p className="mb-0 mt-4"><a href="/shop" className="btn btn-primary">Try it out</a></p>
                 </div>
             </div>
