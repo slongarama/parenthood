@@ -3,31 +3,29 @@ import PropTypes from 'prop-types';
 
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
 
 const styles = theme => ({
-    '@global': {
-        p: {
-            // paddingBottom: 2,
-        },
-    },
-    // container: {
-
-    // },
     allText: {
         paddingLeft: 30,
         paddingRight: 30,
     },
-    media: {
-        height: 140,
+    header: {
+        paddingTop: 30,
     },
     question: {
         paddingTop: 10,
-        // paddingBottom: 10,
     },
-    answer: {
-        // How to add paragraph spacing?
+    sectionHeader: {
+        paddingTop: 20,
+        borderColor: '#3e64ff',
+        borderTopStyle: 'solid',
+        borderWidth: 2,
+        borderRadius: 1,
+        position: 'relative',
     },
+    lastBlock: {
+        paddingBottom: 30,
+    }
 });
 
 class AboutUs extends Component {
@@ -35,7 +33,7 @@ class AboutUs extends Component {
         const { classes } = this.props;
 
         return (
-            <div className='site-section'>
+            <div className={'site-section ' + classes.header}>
                 <div className={'container ' + classes.allText}>
                     <Typography component="h1" variant="h3" color="textPrimary" gutterBottom>
                         About Us
@@ -69,13 +67,13 @@ class AboutUs extends Component {
                             our products go through a safe and rigorous deep-cleaning process to ensure the
                             highest quality standards to your baby.
                         </p>
-                        <p>
+                        <p className='lastBlock'>
                             Give your baby the best, while saving your wallet and our planet!
                         </p>
                     </Typography>
 
                     {/* --- QUESTION 2 --------------------------------------------------------- */}
-                    <Typography variant="h6" color="textSecondary" className={classes.question}>
+                    <Typography variant="h6" color="textSecondary" className={classes.question + ' ' + classes.sectionHeader}>
                         Our Problem
                     </Typography>
                     <Typography variant="p" color='textPrimary' className={classes.answer} component="p">
@@ -118,7 +116,7 @@ class AboutUs extends Component {
                     </Typography>
 
                     {/* --- QUESTION 4 --------------------------------------------------------- */}
-                    <Typography variant="h6" color="textSecondary" className={classes.question} component="p">
+                    <Typography variant="h6" color="textSecondary" className={classes.question + ' ' + classes.sectionHeader} component="p">
                         Our Quality Control
                     </Typography>
                     <Typography variant="p" color='textPrimary' className={classes.answer}>

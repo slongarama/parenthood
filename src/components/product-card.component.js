@@ -13,7 +13,8 @@ export default class ProductCard extends Component {
 
         axios.get('http://localhost:5000/products/' + id)
             .then(response => {
-                this.setState({ loading: false, 
+                this.setState({
+                    loading: false,
                     product: response.data
                 });
             })
@@ -39,7 +40,7 @@ export default class ProductCard extends Component {
                                     {this.state.product && this.state.product.pricing &&
                                         <h4>${this.state.product.pricing.likenew_price}/month</h4>
                                     }
-                                    <p> {this.state.product.description} </p>  
+                                    <p> {this.state.product.description} </p>
                                 </div>
                                 <p className="mb-0 mt-4"><a href="#" className="btn btn-primary">Add to Cart</a></p>
                             </div>
