@@ -18,6 +18,7 @@ const styles = theme => ({
   cardContent: {
     flexGrow: 1,
   },
+
 });
 
 class ProductsList extends Component {

@@ -5,25 +5,27 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
-    '@global': {
-        p: {
-            // paddingBottom: 2,
-        },
-    },
     allText: {
         paddingLeft: 30,
         paddingRight: 30,
     },
-    media: {
-        height: 140,
+    header: {
+        paddingTop: 30,
     },
     question: {
         paddingTop: 10,
-        // paddingBottom: 10,
     },
-    answer: {
-        // How to add paragraph spacing?
+    sectionHeader: {
+        paddingTop: 20,
+        borderColor: '#3e64ff',
+        borderTopStyle: 'solid',
+        borderWidth: 2,
+        borderRadius: 1,
+        position: 'relative',
     },
+    lastBlock: {
+        paddingBottom: 30,
+    }
 });
 
 class FAQ extends Component {
@@ -31,13 +33,13 @@ class FAQ extends Component {
         const { classes } = this.props;
 
         return (
-            <div className='site-section'>
+            <div className={'site-section ' + classes.header}>
                 <div className={'container ' + classes.allText}>
                     <Typography component="h1" variant="h3" color="textPrimary" gutterBottom>
                         FAQ
                     </Typography>
 
-                    <Typography component="h5" variant="h5" color="textPrimary" gutterBottom>
+                    <Typography component="h5" variant="h5" color="textPrimary" className={classes.sectionHeader} gutterBottom>
                         Our Service
                     </Typography>
 
@@ -108,7 +110,7 @@ class FAQ extends Component {
                     <Typography variant="h6" color="textSecondary" className={classes.question}>
                         What is the difference between rent like new and pre-loved?
                     </Typography>
-                    <Typography variant="p" color='textPrimary' className={classes.answer} component="p">
+                    <Typography variant="p" color='textPrimary' className={classes.answer + ' ' + classes.lastBlock} component="p">
                         Like new items are either brand new products or items that were loved for
                         less than 10 months. Pre-loved items were previously loved for longer
                         than 10 months. We have a rigorous cleaning process and quality control
@@ -118,7 +120,7 @@ class FAQ extends Component {
                     {/****************************************************************************/}
                     {/****************************************************************************/}
 
-                    <Typography component="h5" variant="h5" color="textPrimary" gutterBottom>
+                    <Typography component="h5" variant="h5" color="textPrimary" className={classes.sectionHeader} gutterBottom>
                         Our Service
                     </Typography>
 
@@ -163,7 +165,7 @@ class FAQ extends Component {
                     <Typography variant="h6" color="textSecondary" className={classes.question}>
                         What if an item gets damaged while it’s in my care?
                     </Typography>
-                    <Typography variant="p" color='textPrimary' className={classes.answer} component="p">
+                    <Typography variant="p" color='textPrimary' className={classes.answer + ' ' + classes.lastBlock} component="p">
                         Don’t worry about your baby’s mess. We expect some wear and tear after
                         loving an item. If we can clean it or repair it, you won’t be charged extra.
                     </Typography>
@@ -171,7 +173,7 @@ class FAQ extends Component {
                     {/****************************************************************************/}
                     {/****************************************************************************/}
 
-                    <Typography component="h5" variant="h5" color="textPrimary" gutterBottom>
+                    <Typography component="h5" variant="h5" color="textPrimary" className={classes.sectionHeader} gutterBottom>
                         Our Purpose
                     </Typography>
 
@@ -190,7 +192,7 @@ class FAQ extends Component {
                     <Typography variant="h6" color="textSecondary" className={classes.question}>
                         Why is it important?
                     </Typography>
-                    <Typography variant="p" color='textPrimary' className={classes.answer} component="p">
+                    <Typography variant="p" color='textPrimary' className={classes.answer + ' ' + classes.lastBlock} component="p">
                         We are currently part of an unsustainable consumption cycle. While babies grow
                         extraordinarily fast, products don’t grow with them. Parents spend an
                         average of US$12,000 every year with baby products, which become outgrown
