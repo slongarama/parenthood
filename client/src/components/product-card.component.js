@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+const port = process.env.PORT || 5000;
 
 export default class ProductCard extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ export default class ProductCard extends Component {
         window.scrollTo(0, 0);
         const { id } = this.props.match.params;
 
-        axios.get('http://localhost:5000/products/' + id)
+        axios.get(port + 'products/' + id)
             .then(response => {
                 this.setState({
                     loading: false,

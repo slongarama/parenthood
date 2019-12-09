@@ -6,6 +6,7 @@ import '../styles/components/products-list.css'
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+const port = process.env.PORT || 5000;
 
 const styles = theme => ({
   cardGrid: {
@@ -28,7 +29,7 @@ class ProductsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/products/')
+    axios.get(port + '/products/')
       .then(response => {
         this.setState({ products: response.data });
       })
