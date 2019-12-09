@@ -6,7 +6,7 @@ import '../styles/components/products-list.css'
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-const port = process.env.PORT || 5000;
+const port = 'https://protected-cove-03602.herokuapp.com/products' || 5000;
 
 const styles = theme => ({
   cardGrid: {
