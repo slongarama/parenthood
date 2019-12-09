@@ -6,7 +6,6 @@ import '../styles/components/products-list.css'
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-const port = 'https://protected-cove-03602.herokuapp.com/products' || 5000;
 
 const styles = theme => ({
   cardGrid: {
@@ -29,7 +28,7 @@ class ProductsList extends Component {
   }
 
   componentDidMount() {
-    axios.get(port + '/products/')
+    axios.get('/products')
       .then(response => {
         this.setState({ products: response.data });
       })
