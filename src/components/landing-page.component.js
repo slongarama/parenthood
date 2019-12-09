@@ -120,7 +120,8 @@ export default class LandingPage extends Component {
                             </div>
                             <div className="row">
                                 <div className="col-md-3 mb-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                                    <div className="service-29193 text-center">
+                                    <div className="service-29193 text-center info-icon">
+                                        <img src="images/convenient.png" vspace="20" alt="" className="img-fluid" />
                                         <h3>Convenient</h3>
                                         <p> We do the research for you and  
                                         curate the most essential, high quality and safe products 
@@ -129,7 +130,8 @@ export default class LandingPage extends Component {
                                     </div>
                                 </div>
                                 <div className="col-md-3 mb-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                                    <div className="service-29193 text-center">
+                                    <div className="service-29193 text-center info-icon">
+                                        <img src="images/affordable.png" vspace="20" alt="" className="img-fluid" />
                                         <h3>Affordable</h3>
                                         <p>Did you know that parents tend to 
                                         spend $12,000 on baby gear every year?
@@ -138,7 +140,8 @@ export default class LandingPage extends Component {
                                     </div>
                                 </div>
                                 <div className="col-md-3 mb-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                                    <div className="service-29193 text-center">
+                                    <div className="service-29193 text-center info-icon">
+                                        <img src="images/sustainable.png" vspace="20" alt="" className="img-fluid" />
                                         <h3>Sustainable</h3>
                                         <p> Our model reduces the cluster at  
                                         your home, and the waste in our planet. 
@@ -146,7 +149,8 @@ export default class LandingPage extends Component {
                                     </div>
                                 </div>
                                 <div className="col-md-3 mb-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                                    <div className="service-29193 text-center">
+                                    <div className="service-29193 text-center info-icon">
+                                        <img src="images/personalized.png" vspace="20" alt="" className="img-fluid" />
                                         <h3>Personalized</h3>
                                         <p> Get the best quality gear to help in 
                                         your baby’s development. Try out different
