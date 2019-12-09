@@ -28,7 +28,7 @@ class ProductsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://protected-cove-03602.herokuapp.com/products')
+    axios.get('https://parenthood.herokuapp.com/products')
       .then(response => {
         this.setState({ products: response.data });
       })

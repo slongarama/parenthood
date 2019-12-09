@@ -11,7 +11,7 @@ export default class ProductCard extends Component {
         window.scrollTo(0, 0);
         const { id } = this.props.match.params;
 
-        axios.get('https://protected-cove-03602.herokuapp.com/products' + id)
+        axios.get('https://parenthood.herokuapp.com/products' + id)
             .then(response => {
                 this.setState({
                     loading: false,
