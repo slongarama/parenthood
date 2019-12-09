@@ -14,11 +14,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "fsevents": "^2.1.2",
     "mongoose": "^5.7.10"
-  },
-  "optional-dependencies": {
-    "fsevents": "^2.1.2"
   },
   "engines": {
     "node": "8.9.2"
