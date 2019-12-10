@@ -11,8 +11,10 @@ export default function StickyFooter() {
                         <div className="row">
                             <div className="col-md-7">
                                 <h2 className="footer-heading mb-4">About Us</h2>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-
+                                <p> Our mission is to make the best quality baby gear accessible to all families while
+                        creating a sustainable consumption cycle for the future of your little one. With
+                        parenthood you can rent items for as long as you need, and send them back to us
+                        when their time is up.</p>
                             </div>
                             <div className="col-md-4 ml-auto">
                                 <h2 className="footer-heading mb-4">Features</h2>
@@ -38,8 +40,6 @@ export default function StickyFooter() {
                                         <button className="btn btn-primary text-white" type="button" id="button-addon2">Subscribe</button>
                                     </div>
                                 </div>
-
-
 
                                 <h2 className="footer-heading mb-4">Follow Us</h2>
                                 <a href="#about-section" className="smoothscroll pl-0 pr-3"><span className="icon-facebook"></span></a>
