@@ -28,7 +28,7 @@ class ProductsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/products/')
+    axios.get('https://parenthood.herokuapp.com/products/')
       .then(response => {
         this.setState({ products: response.data });
       })
