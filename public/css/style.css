@@ -1636,6 +1636,7 @@ h1, h2, h3, h4, h5,
   max-width: 500px; }
   @media (max-width: 991.98px) {
     .box-92819 {
+      left: 50%;
       width: 100%; } }
 
 .media-02819 {
