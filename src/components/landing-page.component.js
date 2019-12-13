@@ -121,11 +121,20 @@ export default class LandingPage extends Component {
                             <div className="row">
                                 <div className="col-md-3 mb-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                                     <div className="service-29193 text-center info-icon">
+                                        <img src="images/personalized.png" vspace="20" alt="" className="img-fluid" />
+                                        <h3>Personalized</h3>
+                                        <p> Get the best quality curated gear to help in 
+                                        your baby’s growth and development. Try out different
+                                        products and swap them out as many times as you want.</p>
+                                    </div>
+                                </div>
+                                <div className="col-md-3 mb-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                                    <div className="service-29193 text-center info-icon">
                                         <img src="images/convenient.png" vspace="20" alt="" className="img-fluid" />
                                         <h3>Convenient</h3>
                                         <p> We do the research for you and  
                                         curate the most essential, high quality and safe products 
-                                        in the market. We also ship, clean and store it for you.  
+                                        in the market. We also ship and handle the logistics for you.  
                                         </p>
                                     </div>
                                 </div>
@@ -134,8 +143,8 @@ export default class LandingPage extends Component {
                                         <img src="images/affordable.png" vspace="20" alt="" className="img-fluid" />
                                         <h3>Affordable</h3>
                                         <p>Did you know that parents tend to 
-                                        spend $12,000 on baby gear every year?
-                                        Give your wallet a break and pay 
+                                        spend $12,000 on baby gear in the baby's first year?
+                                        Give your wallet a break and pay cheaper prices
                                         only for as long as you need it. </p>
                                     </div>
                                 </div>
@@ -143,20 +152,12 @@ export default class LandingPage extends Component {
                                     <div className="service-29193 text-center info-icon">
                                         <img src="images/sustainable.png" vspace="20" alt="" className="img-fluid" />
                                         <h3>Sustainable</h3>
-                                        <p> Our model reduces the cluster at  
-                                        your home, and the waste in our planet. 
+                                        <p> Our model reduces the clutter at  
+                                        your home, and the waste on our planet. 
                                         Let’s create a mindful consumption cycle together!</p>
                                     </div>
                                 </div>
-                                <div className="col-md-3 mb-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                                    <div className="service-29193 text-center info-icon">
-                                        <img src="images/personalized.png" vspace="20" alt="" className="img-fluid" />
-                                        <h3>Personalized</h3>
-                                        <p> Get the best quality gear to help in 
-                                        your baby’s development. Try out different
-                                        products and swap them out as many times as you want.</p>
-                                    </div>
-                                </div>
+                                
 
                             </div>
                         </div>
